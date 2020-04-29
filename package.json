@@ -1,0 +1,27 @@
+{
+  "name": "project-decoder",
+  "version": "1.0.0",
+  "description": "My decoder for a production practice",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "decoder",
+    "1251",
+    "utf8",
+    "iso8859",
+    "charset"
+  ],
+  "author": "Maklakov Viktor",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "iconv-lite": "^0.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

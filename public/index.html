@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Декодер КРУ</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="display-4 mb-5">Декодер<sup style="opacity: .3; font-size: 50%;">beta</sup></h1>
+    <form method="POST" action="/processing">
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Введите текст ошибки:</label>
+            <textarea name="csin" class="form-control csin" id="exampleFormControlTextarea1" rows="5" style="max-width: 50rem;">ÐÐ²Ñ‚Ð¾Ñ€	Ð˜Ð¼Ñ	Ð“Ð¾Ð´	Ð¦ÐµÐ½Ð°	ÐžÐ¿Ð¸ÑÐ°Ð½Ð¸Ðµ
+                Àâòîð 1	Êíèãà 1	2000	450	Îïèñàíèå 1
+                Àâòîð 2	Êíèãà 2	2001	500	Îïèñàíèå 2
+                Àâòîð 3	Êíèãà 3	2002	550	Îïèñàíèå 3
+                AAaaaaaaaa	Êíèãà 4	2003	750	Îïèñàíèå 4555
+            </textarea>
+        </div>
+        <div class="cont"></div>
+        <button type="submit" class="btn btn-outline-primary fetchData">Отправить</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
