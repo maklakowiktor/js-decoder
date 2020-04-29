@@ -2,7 +2,7 @@ const fetchData = document.querySelector('.fetchData'); // кнопка "Отп�
 const stringIn = document.querySelector('.csin'); // Поле, из которого отправляем данные
 const stringOut = document.querySelector('.cont'); // Поле для получения результата с сервера
 const emoj = '&#9193;';
-const titles = [`cp1252 ${emoj} utf8`, `cp1252 ${emoj} cp1251`, `iso8859 ${emoj} utf8`, `cp1251 ${emoj} utf8`];
+const titles = [`CP1252 ${emoj} UTF8`, `CP1252 ${emoj} CP1251`, `ISO8859 ${emoj} UTF8`, `CP1251 ${emoj} UTF8`];
 
 fetchData.onclick = sendData; // При клике выполняем функцию sendData 
 stringIn.oninput = sendData; // При вводе выполняем ф-ю sendData
