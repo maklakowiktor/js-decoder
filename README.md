@@ -5,6 +5,10 @@
 Make sure you have [Node.js](http://nodejs.org/) installed.
 
 ```sh
+git clone https://github.com/maklakowiktor/js-decoder.git # If don't have installed git on your PC click "Download ZIP" button above
+```
+
+```sh
 cd js-decoder
 ```
 
