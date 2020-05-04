@@ -1,10 +1,21 @@
 const fetchData = document.querySelector('.fetchData'); // кнопка "Отправить"
 const stringIn = document.querySelector('.csin'); // Поле, из которого отправляем данные
 const stringOut = document.querySelector('.cont'); // Поле для получения результата с сервера
+const resOut = document.querySelectorAll('.res'); // Вывод
 const emoj = '&#9193;';
-const titles = [`CP1252 ${emoj} UTF8`, `CP1252 ${emoj} CP1251`, `ISO8859 ${emoj} UTF8`, `CP1251 ${emoj} UTF8`];
+const titles = [`CP1251 ${emoj} UTF8`, `CP1252 ${emoj} UTF8`, `CP1252 ${emoj} CP1251`, `ISO8859 ${emoj} UTF8`];
 
-fetchData.onclick = sendData; // При клике выполняем функцию sendData 
+$(document).ready(function(){
+    $('.cont').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: false,
+    });
+});
+
+// fetchData.onclick = sendData; // При клике выполняем функцию sendData 
 stringIn.oninput = sendData; // При вводе выполняем ф-ю sendData
 
 function sendData(e) {
@@ -21,17 +32,23 @@ function sendData(e) {
     .then( data => {
         let obj = JSON.parse(data);
         let i = 0;
-
-        stringOut.innerHTML = '';
+        document.querySelector('.cont').style.visibility = 'visible'
         for (var key in obj) {
-            stringOut.innerHTML = stringOut.innerHTML + `
+            resOut[i].innerHTML = `
             <div class="card bg-light mb-3" style="max-width: 50rem">
-                <h5 class="card-header">${titles[i]}</h5>
-                <div class="card-body">
-                    <p class="card-text">${obj[key]}</p>
-                </div>
-            </div>`
+            <h5 class="card-header">${titles[i]}</h5>
+            <div class="card-body">
+                <p class="card-text">${obj[key]}</p>
+            </div>
+        </div>`;
+
             i++;
         }
+            // `<div class="card bg-light mb-3" style="max-width: 50rem">
+            //     <h5 class="card-header">${titles[i]}</h5>
+            //     <div class="card-body">
+            //         <p class="card-text">${obj[key]}</p>
+            //     </div>
+            // </div>`
     })
 }

@@ -1,3 +1,29 @@
 body {
     padding: 3% 10%;
 }
+
+/* .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
+
+.slick-prev {
+    left: -40px !important;
+}
+
+.cont {
+    max-width: 51rem;
+    visibility: hidden;
+    padding: 0 5px !important;
+}
+
+.slick-prev, .slick-next {
+    top: 45% !important;
+}
+
+.slick-prev:before, .slick-next:before {
+   font-size: 2rem !important;
+   color: #444 !important;
+}
