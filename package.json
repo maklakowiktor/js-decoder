@@ -17,8 +17,8 @@
   "author": "Maklakov Viktor",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
     "iconv-lite": "^0.5.1"
   },
   "devDependencies": {
